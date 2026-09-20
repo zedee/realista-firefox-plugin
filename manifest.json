@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Realista",
+  "version": "0.1",
+
+  "description": "Mejora el etiquetaje o quita de la lista de resultados todo lo que sean anuncios con finalidad especulativa u otros tejemanejes alejados de lo que sería comprarse un piso o una casa para el pueblo llano.",
+
+  "icons": {
+    "48": "icons/buitre-48.png",
+    "96": "icons/buitre-96.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.idealista.com/venta-viviendas/*",
+        "*://*.idealista.com/*/venta-viviendas/*",
+        "*://*.idealista.com/*/alquiler-viviendas/*"
+      ],
+      "js": ["realista.js"]
+    }
+  ]
+}
